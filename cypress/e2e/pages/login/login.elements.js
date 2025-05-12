@@ -13,10 +13,12 @@ static get textboxes(){
 static get buttons() {
     return{
         get close(){
-            cy.get('div[id="logInModal"] button').eq(1)
+
+           return cy.get('div[id="logInModal"] button').eq(1)
         },
         get login(){
-            cy.contains('button', 'Log in')
+
+           return cy.contains('button', 'Log in')
         }
     }
 }

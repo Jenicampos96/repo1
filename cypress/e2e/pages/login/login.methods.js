@@ -12,4 +12,10 @@ static insertPassword(password){
 static clickOnloginButton() {
     LoginElements.buttons.login.click()
 }
+
+static login(username,pasword){
+    this.insertUserName(username)
+    this.insertPassword(pasword)
+    this.clickOnloginButton()
+}
 }

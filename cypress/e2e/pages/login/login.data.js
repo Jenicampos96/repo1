@@ -1,5 +1,5 @@
 export class LoginData{
-     static get invalidCredencials (){
+     static get invalidCredencials(){
         return {
             username: "abc",
             password:"abc"
