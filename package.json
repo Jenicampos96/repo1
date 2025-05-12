@@ -4,12 +4,28 @@
   "description": "",
   "main": "caso-de-prueba.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "limpiar-reporte": "npx rimraf ./allure-report && npx rimraf ./allure-results",
+    "ejecutar-pruebas": "npx cypress run --headed --env allure=true",
+    "generar-reporte": "npx allure generate allure-results -o allure-report --clean",
+    "abrir-reporte": "npx allure open allure-report",
+    "test": "npm run limpiar-reporte && npm run ejecutar-pruebas && npm run generar-reporte && npm run abrir-reporte"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^14.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jenicampos96/repo1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Jenicampos96/repo1/issues"
+  },
+  "homepage": "https://github.com/Jenicampos96/repo1#readme",
+  "dependencies": {
+    "@shelex/cypress-allure-plugin": "^2.41.1",
+    "allure-commandline": "^2.34.0"
   }
 }
