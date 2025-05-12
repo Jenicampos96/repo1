@@ -2,11 +2,11 @@ import { LoginMethods } from "./pages/login/login.methods"
 
 describe('template spec', () => {
   it('passes', () => {
-    cy.visit('https://www.demoblaze.com/')
-    cy.wait(2000)
+    const usuario= "random01"
+    const contrasena="random01"
+    cy.visit('https://www.demoblaze.com/index.html')
     cy.get('a[data-target="#logInModal"]').click()
-    LoginMethods.insertUserName("hola")
-    LoginMethods.insertPassword("hola")
-    LoginMethods.clickOnloginButton()
+    LoginMethods.login(usuario, contrasena)
+    cy.get('a#nameofuser').should("contain.text", usuario)
   })
 })
