@@ -1,12 +1,13 @@
+import { CommonPageMethods } from "../common-page/commonpage.methods";
 import { SignupElements } from "./signup.elements";
 
 export class SignupMethods {
     static insertUSerNAme(username){
-        SignupElements.textboxes.username.invoke("val",username);
+        SignupElements.textboxes().username.invoke("val",username);
     }
     
     static insertPassword(password){
-        SignupElements.textboxes.password.invoke("val",password);
+        SignupElements.textboxes().password.invoke("val",password);
     }
 
     static clickOnsingupBoton(){
@@ -17,5 +18,11 @@ export class SignupMethods {
         this.insertUSerNAme(username);
         this.insertPassword(password);
         this.clickOnsingupBoton();
+    }
+
+
+    //este metodo es para verfificar que el usuario se loguee con exito
+    static verifySignUpSuccesfulMessageISDispalyed(){
+        CommonPageMethods.verifyAlert("Sign up successful.")
     }
 }
