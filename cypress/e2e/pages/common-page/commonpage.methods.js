@@ -36,4 +36,21 @@ export class CommonPageMethods {
       expect(str).to.equal(espectedMessage);
     });
   }
+
+  static generateRandomString(length=10){
+    let results=""
+    const characters="abcdefghijklmnopqrstuvwxyz0123456789"
+    const constcharactersLenght = characters.length
+    let counter =0
+
+    while (counter<length) {
+      results+= characters.charAt(Math.floor(Math.random()* constcharactersLenght))
+      counter+= 1
+    }
+    return results
+  }
+
+  static verifySignedUser(username){
+   CommonPageElements.signUser.should("have.text", `Welcome ${username}`)
+  }
 }
