@@ -1,4 +1,5 @@
 import { Logger } from "../../Util/logger";
+import { CommonPageMethods } from "../common-page/commonpage.methods";
 import { LoginElements } from "./login.elements";
 
 export class LoginMethods{
@@ -21,5 +22,9 @@ static login(username,pasword){
     this.insertPassword(pasword)
     Logger.subStep("click en el botton login")
     this.clickOnloginButton()
+}
+
+static verifyWrongPasswordMessage(){
+    CommonPageMethods.verifyAlert("Wrong password.")
 }
 }

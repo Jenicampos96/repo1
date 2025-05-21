@@ -26,4 +26,28 @@ describe( CommonPageData.testSuites.autenticacion, ()=>{
         CommonPageMethods.verifySignedUser(LoginData.validCredencials.username)
 
     })
+
+
+     it ("inicio de sesion invalido", ()=>{
+        Logger.stepNumber(1)
+        Logger.step("Navegar a la pagina de inicio")
+        CommonPageMethods.navigateToDemoBlaze()
+
+        Logger.stepNumber(2)
+        Logger.step("Hacer clic en Log in  en la barra de navegacion")
+        CommonPageMethods.clickOnLoginOPtion()
+
+        Logger.stepNumber(3)
+        Logger.step("Ingresar un nombre de usuario y contrasena invalidas")
+        LoginMethods.insertUserName(LoginData.validCredencials.username),
+        LoginMethods.insertPassword("contrasena invalida")
+        
+       Logger.stepNumber(4)
+        Logger.step("Hacer clic en log in para iniciar sesion")
+        LoginMethods.clickOnloginButton()
+        Logger.verification("verificar que se redirige al usuario a la pagina de inicio")
+        LoginMethods.verifyWrongPasswordMessage();
+        
+
+    })
 })
