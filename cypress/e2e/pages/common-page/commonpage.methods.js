@@ -19,7 +19,7 @@ export class CommonPageMethods {
     CommonPageElements.TopMenu.AboutUs.click();
   }
 
-  static clickOncartPtion() {
+  static clickOncartOPtion() {
     CommonPageElements.TopMenu.cart.click();
   }
 
