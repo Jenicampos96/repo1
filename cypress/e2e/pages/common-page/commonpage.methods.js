@@ -20,7 +20,10 @@ export class CommonPageMethods {
   }
 
   static clickOncartOPtion() {
-    CommonPageElements.TopMenu.cart.click();
+    CommonPageElements.TopMenu.cart.click(); //despues de dar click va a omitir errores que no son propios de cypress
+    Cypress.on("uncaught:exception", (err, runnable)=>{
+      return false
+    })
   }
 
   static clickOnLoginOPtion() {

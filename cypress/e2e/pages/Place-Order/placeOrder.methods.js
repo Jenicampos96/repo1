@@ -31,5 +31,14 @@ export class PlaceOrderMethods{
     PlaceOrderelements.buttons.purchase.click()
    }
 
+   static insertOrderInfortation(data){
+ this.insertName(data.name)
+ this.insertCountry(data.country)
+ this.insertcity(data.city)
+ this.insertcredircard(data.creditcardNumber)
+ this.insertMonth(data.Month)
+ this.insertYear(data.Year)
+   }
+
    
 }

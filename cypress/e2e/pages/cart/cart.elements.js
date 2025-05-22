@@ -1,7 +1,7 @@
 export class CartElements{
     static get buttons(){
         return {
-            get placeholder(){
+            get placeOlder(){
                return  cy.get('button[data-toggle="modal"]')
             },
 
