@@ -25,6 +25,10 @@ describe( CommonPageData.testSuites.autenticacion, ()=>{
         Logger.verification("verificar que se redirige al usuario a la pagina de inicio")
         CommonPageMethods.verifySignedUser(LoginData.validCredencials.username)
 
+         Logger.postCondition("Hacer log out")
+        CommonPageMethods.logout()
+      
+
     })
 
 
@@ -49,5 +53,6 @@ describe( CommonPageData.testSuites.autenticacion, ()=>{
         LoginMethods.verifyWrongPasswordMessage();
         
 
+       
     })
 })
