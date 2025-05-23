@@ -1,1 +1,10 @@
 node_modules/*
+multi-reporter-config.json
+cypress/parallel-weights.json
+cypress/screenshots/catalogo-y-compras.cy.js/catalogo y compra -- navegacion por categorias (failed).png
+
+runner-results/cypress_e2e_Test_autenticacion.cy.js.json
+runner-results/cypress_e2e_Test_registro.cy.js.json
+runner-results/cypress_e2e_Test_catalogo-y-compras.cy.js.json
+cypress/e2e/pages/cart/cart.methods.js
+cypress/e2e/pages/cart/cart.methods.js
