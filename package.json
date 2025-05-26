@@ -12,7 +12,7 @@
     "test": "npm run limpiar-reporte && (npm run ejecutar-pruebas || true) && npm run generar-reporte && npm run abrir-reporte",
  
 
-      "cy:parallel": "npm run limpiar-reporte && cypress-parallel -s ejecutar-pruebas -t 2 -d ./cypress/e2e/Test && npm run generar-reporte"
+      "cy:parallel": "npm run limpiar-reporte && cypress-parallel -s ejecutar-pruebas -t 2 -d ./cypress/e2e/Test || true && npm run generar-reporte"
 
 
   },
