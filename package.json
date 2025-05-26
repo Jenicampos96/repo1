@@ -5,11 +5,16 @@
   "main": "caso-de-prueba.js",
   "scripts": {
     "limpiar-reporte": "npx rimraf ./allure-report && npx rimraf ./allure-results",
-    "ejecutar-pruebas": "npx cypress run --browser edge --env allure=true",
+    "ejecutar-pruebas": "npx cypress run  --env allure=true",
+
     "generar-reporte": "npx allure generate allure-results -o allure-report --clean",
     "abrir-reporte": "npx allure open allure-report",
     "test": "npm run limpiar-reporte && (npm run ejecutar-pruebas || true) && npm run generar-reporte && npm run abrir-reporte",
-    "cy:parallel": "npm run limpiar-reporte && cypress-parallel -s ejecutar-pruebas -t 2 -d ./cypress/e2e/Test && npm run generar-reporte"
+ 
+
+      "cy:parallel": "npm run limpiar-reporte && cypress-parallel -s ejecutar-pruebas -t 2 -d ./cypress/e2e/Test && npm run generar-reporte"
+
+
   },
   "keywords": [],
   "author": "",
